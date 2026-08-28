@@ -1,0 +1,314 @@
+/* RESET CƠ BẢN */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+/* HEADER */
+header {
+    background-color: #2f5d3a;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
+
+/* Ô TÌM KIẾM */
+.search-box input {
+    width: 300px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+
+/* GIỎ HÀNG */
+.cart {
+    font-size: 17px;
+}
+
+#cart-count {
+    background-color: #e74c3c;
+    color: white;
+
+    padding: 4px 9px;
+    border-radius: 50%;
+
+    margin-left: 5px;
+}
+
+
+/* NỘI DUNG CHÍNH */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* PHẦN GIỚI THIỆU */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #666;
+    font-size: 17px;
+}
+
+
+/* BỘ LỌC */
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.filter-section h2 {
+    font-size: 26px;
+}
+
+#category-filter {
+    padding: 10px;
+    font-size: 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+/* DANH SÁCH SẢN PHẨM */
+#product-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 50px;
+}
+
+
+/* THẺ SẢN PHẨM */
+.product-card {
+    background-color: white;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    padding-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+}
+
+
+/* NỘI DUNG TRONG THẺ */
+.product-card h3,
+.product-card p,
+.product-card button {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 8px;
+}
+
+
+/* NÚT THÊM GIỎ HÀNG */
+.product-card button {
+    width: calc(100% - 30px);
+
+    padding: 10px;
+
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #2f5d3a;
+    color: white;
+
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.product-card button:hover {
+    background-color: #1f4228;
+}
+
+
+/* THÔNG BÁO KHÔNG CÓ SẢN PHẨM */
+.no-product {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    font-size: 18px;
+    color: #777;
+
+    padding: 30px;
+}
+
+
+/* FORM ĐẶT HÀNG */
+.order-section {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: 40px;
+}
+
+.order-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+/* NHÓM FORM */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+}
+
+.form-group textarea {
+    height: 100px;
+
+    resize: vertical;
+}
+
+
+/* NÚT GỬI ĐƠN */
+#order-form button {
+    width: 100%;
+
+    padding: 12px;
+
+    background-color: #2f5d3a;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+#order-form button:hover {
+    background-color: #1f4228;
+}
+
+
+/* FOOTER */
+footer {
+    background-color: #222;
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    .filter-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    #category-filter {
+        width: 100%;
+    }
+
+}
