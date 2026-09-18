@@ -15,10 +15,20 @@
     <header>
         <div class="header-container">
 
+            <!-- Logo + tagline -->
             <div class="logo">
                 <h1>Đặc Sản Tây Nguyên</h1>
+                <p class="logo-tagline">Hương vị đất rừng — Chất lượng thật sự</p>
             </div>
 
+            <!-- Menu điều hướng -->
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Trang chủ</a>
+                <a href="#product-list" class="nav-link">Sản phẩm</a>
+                <a href="#contact" class="nav-link">Liên hệ</a>
+            </nav>
+
+            <!-- Ô tìm kiếm -->
             <div class="search-box">
                 <input
                     type="text"
@@ -27,8 +37,9 @@
                 >
             </div>
 
-            <div class="cart">
-                🛒 Giỏ hàng:
+            <!-- Giỏ hàng -->
+            <div class="cart" id="cart-btn">
+                🛒
                 <span id="cart-count">0</span>
             </div>
 
@@ -36,17 +47,121 @@
     </header>
 
 
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
+    <div id="detail-modal" class="detail-modal hidden">
+
+        <div class="detail-modal-content">
+
+            <div class="detail-modal-header">
+                <h2 id="detail-name"></h2>
+                <button id="close-detail">✕</button>
+            </div>
+
+            <div class="detail-modal-body">
+
+                <img id="detail-image" src="" alt="">
+
+                <div class="detail-info">
+                    <p><strong>Danh mục:</strong> <span id="detail-category"></span></p>
+                    <p><strong>Xuất xứ:</strong> <span id="detail-origin"></span></p>
+                    <p><strong>Đơn vị:</strong> <span id="detail-unit"></span></p>
+                    <p><strong>Giá:</strong> <span id="detail-price"></span></p>
+                    <p><strong>Tình trạng:</strong> <span id="detail-stock"></span></p>
+                    <p><strong>Mô tả:</strong> <span id="detail-description"></span></p>
+                    <p id="detail-featured"></p>
+                </div>
+
+            </div>
+
+            <button id="detail-add-cart" class="detail-add-cart-btn"></button>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL FORM ĐẶT HÀNG -->
+    <div id="order-modal" class="order-modal hidden">
+
+        <div class="order-modal-content">
+
+            <div class="order-modal-header">
+                <h2>Thông tin đặt hàng</h2>
+                <button id="close-order">✕</button>
+            </div>
+
+            <form id="order-form">
+
+                <div class="form-group">
+                    <label for="customer-name">Họ và tên</label>
+                    <input type="text" id="customer-name" placeholder="Nhập họ và tên">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Số điện thoại</label>
+                    <input type="text" id="phone" placeholder="Nhập số điện thoại">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Địa chỉ nhận hàng</label>
+                    <input type="text" id="address" placeholder="Nhập địa chỉ nhận hàng">
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Ghi chú</label>
+                    <textarea id="note" placeholder="Nhập ghi chú nếu có"></textarea>
+                </div>
+
+                <button type="submit">Gửi đơn hàng</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL GIỎ HÀNG -->
+    <div id="cart-modal" class="cart-modal hidden">
+
+        <div class="cart-modal-content">
+
+            <!-- Tiêu đề và nút đóng -->
+            <div class="cart-modal-header">
+                <h2>🛒 Giỏ hàng của bạn</h2>
+                <button id="close-cart">✕</button>
+            </div>
+
+            <!-- Danh sách sản phẩm trong giỏ -->
+            <div id="cart-items">
+                <!-- JavaScript sẽ chèn danh sách vào đây -->
+            </div>
+
+            <!-- Tổng tiền -->
+            <div class="cart-total">
+                <span>Tổng tiền:</span>
+                <span id="cart-total-price">0 đ</span>
+            </div>
+
+            <!-- Nút xóa và thanh toán nằm cạnh nhau -->
+            <div class="cart-actions">
+                <button id="clear-cart">Xóa giỏ hàng</button>
+                <button id="checkout-btn">Thanh toán</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
     <!-- NỘI DUNG CHÍNH -->
     <main>
 
         <!-- GIỚI THIỆU -->
-        <section class="hero">
+        <section class="hero" id="home">
             <h2>Đặc Sản Tây Nguyên</h2>
-
-            <p>
-                Khám phá những sản phẩm đặc sản chất lượng
-                đến từ vùng đất Tây Nguyên.
-            </p>
+            <div class="hero-divider"></div>
+            <p>Khám phá những sản phẩm đặc sản chất lượng đến từ vùng đất Tây Nguyên</p>
         </section>
 
 
@@ -82,74 +197,54 @@
 
         </section>
 
-
-        <!-- FORM ĐẶT HÀNG -->
-        <section class="order-section">
-
-            <h2>Thông tin đặt hàng</h2>
-
-            <form id="order-form">
-
-                <div class="form-group">
-                    <label for="customer-name">
-                        Họ và tên
-                    </label>
-
-                    <input
-                        type="text"
-                        id="customer-name"
-                        placeholder="Nhập họ và tên"
-                    >
-                </div>
-
-
-                <div class="form-group">
-                    <label for="phone">
-                        Số điện thoại
-                    </label>
-
-                    <input
-                        type="text"
-                        id="phone"
-                        placeholder="Nhập số điện thoại"
-                    >
-                </div>
-
-
-                <div class="form-group">
-                    <label for="address">
-                        Địa chỉ nhận hàng
-                    </label>
-
-                    <input
-                        type="text"
-                        id="address"
-                        placeholder="Nhập địa chỉ nhận hàng"
-                    >
-                </div>
-
-
-                <div class="form-group">
-                    <label for="note">
-                        Ghi chú
-                    </label>
-
-                    <textarea
-                        id="note"
-                        placeholder="Nhập ghi chú nếu có"
-                    ></textarea>
-                </div>
-
-
-                <button type="submit">
-                    Gửi đơn hàng
-                </button>
-
-            </form>
-
-        </section>
-
     </main>
+
+
+    <!-- LIÊN HỆ -->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+
+            <h2>Liên hệ với chúng tôi</h2>
+            <p class="contact-desc">Chúng tôi luôn sẵn sàng hỗ trợ bạn về sản phẩm và đơn hàng</p>
+
+            <div class="contact-grid">
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <p class="contact-label">Địa chỉ</p>
+                        <p>123 Đường Lê Duẩn, TP. Buôn Ma Thuột, Đắk Lắk</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <p class="contact-label">Điện thoại</p>
+                        <p>0901 234 567</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>
+                        <p class="contact-label">Email</p>
+                        <p>info@dacsantaynguyen.vn</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕐</div>
+                    <div>
+                        <p class="contact-label">Giờ làm việc</p>
+                        <p>Thứ 2 – Thứ 7: 8:00 – 17:30</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
 
 
     <!-- FOOTER -->
@@ -164,7 +259,6 @@
 
 
     <!-- KẾT NỐI JAVASCRIPT -->
-    <script src="products.js"></script>
     <script src="script.js"></script>
 
 </body>

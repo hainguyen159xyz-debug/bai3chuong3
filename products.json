@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Cà phê Buôn Ma Thuột",
+        "category": "ca-phe",
+        "price": 120000,
+        "unit": "500g",
+        "origin": "Đắk Lắk",
+        "image": "images/cà phê bmt.jpg",
+        "stock": 20,
+        "description": "Cà phê đặc sản Buôn Ma Thuột có hương thơm đậm đà và vị đặc trưng của Tây Nguyên.",
+        "featured": true
+    },
+    {
+        "id": 2,
+        "name": "Mật ong rừng Tây Nguyên",
+        "category": "mat-ong",
+        "price": 180000,
+        "unit": "500ml",
+        "origin": "Gia Lai",
+        "image": "images/mật ong rừng.jpg",
+        "stock": 10,
+        "description": "Mật ong rừng tự nhiên có vị ngọt thanh và hương thơm đặc trưng.",
+        "featured": true
+    },
+    {
+        "id": 3,
+        "name": "Hạt mắc ca Tây Nguyên",
+        "category": "mac-ca",
+        "price": 200000,
+        "unit": "500g",
+        "origin": "Lâm Đồng",
+        "image": "images/mắc ca.jpg",
+        "stock": 25,
+        "description": "Hạt mắc ca giàu dinh dưỡng, vị béo bùi và thơm ngon.",
+        "featured": true
+    },
+    {
+        "id": 4,
+        "name": "Hồ tiêu Tây Nguyên",
+        "category": "tieu",
+        "price": 100000,
+        "unit": "500g",
+        "origin": "Đắk Nông",
+        "image": "images/tiêu.jpg",
+        "stock": 30,
+        "description": "Hồ tiêu Tây Nguyên có vị cay thơm và được trồng tại vùng đất bazan.",
+        "featured": false
+    },
+    {
+        "id": 5,
+        "name": "Bơ sáp Tây Nguyên",
+        "category": "bo",
+        "price": 80000,
+        "unit": "1kg",
+        "origin": "Đắk Lắk",
+        "image": "images/bơ sáp.jpg",
+        "stock": 15,
+        "description": "Bơ sáp có thịt dẻo, béo và thơm, là đặc sản nổi tiếng của Đắk Lắk.",
+        "featured": true
+    },
+    {
+        "id": 6,
+        "name": "Thổ cẩm Tây Nguyên",
+        "category": "tho-cam",
+        "price": 250000,
+        "unit": "Sản phẩm",
+        "origin": "Đắk Lắk",
+        "image": "images/thổ cẩm.jpg",
+        "stock": 12,
+        "description": "Sản phẩm thổ cẩm mang hoa văn truyền thống và nét văn hóa đặc trưng Tây Nguyên.",
+        "featured": false
+    },
+    {
+        "id": 7,
+        "name": "Nai gác bếp",
+        "category": "nai-gac-bep",
+        "price": 350000,
+        "unit": "500g",
+        "origin": "Gia Lai",
+        "image": "images/nai gác bếp.jpg",
+        "stock": 10,
+        "description": "Thịt nai gác bếp được chế biến theo phương pháp truyền thống, có vị thơm và đậm đà.",
+        "featured": true
+    },
+    {
+        "id": 8,
+        "name": "Bột ca cao Tây Nguyên",
+        "category": "ca-cao",
+        "price": 150000,
+        "unit": "500g",
+        "origin": "Đắk Lắk",
+        "image": "images/bột ca cao.jpg",
+        "stock": 18,
+        "description": "Bột ca cao nguyên chất có hương thơm đặc trưng, phù hợp để pha chế và làm bánh.",
+        "featured": false
+    },
+    {
+        "id": 9,
+        "name": "Măng khô Tây Nguyên",
+        "category": "mang-kho",
+        "price": 180000,
+        "unit": "500g",
+        "origin": "Kon Tum",
+        "image": "images/măng khô.jpg",
+        "stock": 20,
+        "description": "Măng khô được sơ chế và phơi khô theo phương pháp truyền thống.",
+        "featured": false
+    },
+    {
+        "id": 10,
+        "name": "Rượu cần Tây Nguyên",
+        "category": "ruou-can",
+        "price": 300000,
+        "unit": "Chum",
+        "origin": "Kon Tum",
+        "image": "images/rượu cần.jpg",
+        "stock": 8,
+        "description": "Rượu cần là thức uống truyền thống gắn liền với văn hóa cộng đồng Tây Nguyên.",
+        "featured": true
+    }
+]
